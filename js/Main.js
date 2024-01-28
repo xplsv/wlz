@@ -12,6 +12,12 @@ function init() {
 
 	audio = document.getElementById( 'audio' );
 
+	if ( audio.canPlayType( 'audio/ogg' ) === '' ) {
+
+		alert( 'Unfortunately this browser is unable to play the audio (ogg)' );
+
+	}
+
 	camera = new THREE.Camera( 60, 800 / 600, 1, 20000 );
 	camera2 = new THREE.Camera( 60, 800 / 600, 1, 20000 );
 
